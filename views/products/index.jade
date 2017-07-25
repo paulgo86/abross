@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p These are products we have.
+  hr
+  table(border=1)
+    tr
+      th Name
+      th Price
+    -for(var i in pData )
+      tr
+        td= pData[i].name
+        td= pData[i].price
